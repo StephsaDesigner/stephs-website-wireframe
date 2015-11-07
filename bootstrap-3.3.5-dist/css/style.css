@@ -1,4 +1,8 @@
 /****Stephs Styles****/
+.wrap{
+  height: 100vh;
+}
+
 .main-nav{
   position: fixed;
 }
@@ -21,8 +25,17 @@
 
 .box-small{
   display: flex;
-  width: 350px;
+  max-width: 350px;
   height: 200px;
   padding: .5rem;
+  margin: 10px;
   background-color: rgba(135, 135, 135, .5);
+}
+
+figcaption{
+  max-width: 350px;
+}
+
+.titles{
+  text-align: center;
 }
