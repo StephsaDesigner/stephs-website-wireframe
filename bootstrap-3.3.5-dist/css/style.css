@@ -65,3 +65,12 @@ button{
   max-width: 300px;
   min-width: 100%;
 }
+
+input{
+  margin-bottom: 15px !important;
+}
+
+textarea{
+  height: 250px !important;
+  margin-bottom: 15px !important;
+}
