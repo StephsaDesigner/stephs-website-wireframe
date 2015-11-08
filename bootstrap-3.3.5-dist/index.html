@@ -24,7 +24,7 @@
 
   <body>
     <div class="container-fluid">
-      <nav class="navbar navbar-static-top navbar-inverse">
+      <nav class="navbar navbar-static-top navbar-inverse" id="mainNav">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
@@ -47,9 +47,9 @@
         </div><!-- /.container-fluid -->
       </nav>
 
-      <div class="container-fluid" id="fullpage">
+      <div class="container-fluid fullpage-wrapper fp-responsive" id="fullpage">
 
-        <div class="section active home" data-anchor="section0">
+        <div class="section active responsiveHeight" id="home" data-anchor="section0">
             <div class="row">
               <div class="col-md-12 center-block box-large">
                 <div class="page-header">
@@ -59,7 +59,7 @@
             </div>
         </div>
 
-        <div class="section" id="about" data-anchor="section1">
+        <div class="section responsiveHeight" id="about" data-anchor="section1">
             <div class="row">
               <div class="col-sm-12 center-block">
                 <div class="page-header titles">
@@ -103,7 +103,7 @@
             </div>
         </div>
 
-        <div class="section" id="portfolio" data-anchor="section2">
+        <div class="section responsiveHeight" id="portfolio" data-anchor="section2">
             <div class="row">
               <div class="col-sm-12 center-block">
                 <div class="page-header titles">
@@ -149,8 +149,8 @@
             </div>
         </div>
 
-        <div class="section" id="blog" data-anchor="section3"><h1>Blog</h1></div>
-        <div class="section" id="contact" data-anchor="section4"><h1>Contact</h1></div>
+        <div class="section responsiveHeight" id="blog" data-anchor="section3"><h1>Blog</h1></div>
+        <div class="section responsiveHeight" id="contact" data-anchor="section4"><h1>Contact</h1></div>
       </div>
 
     </div><!--end of container-->
@@ -165,8 +165,18 @@
     <script type="text/javascript">
       $(document).ready(function() {
         $('#fullpage').fullpage({
-          anchors:['section0', 'section1', 'section2', 'section3', 'section4']
+          anchors:['section0', 'section1', 'section2', 'section3', 'section4'],
+          menu: '#mainNav',
+          normalScrollElements: '#home, #about, #portfolio, #blog, #contact'
+
+          //responsiveHeight: 0,
+
+          //Custom selectors
+          //sectionSelector: '.section',
+          //slideSelector: '.slide',
         });
+
+        $.fn.fullpage.setAutoScrolling(false);
 
         //$.fn.fullpage.setFitToSection(false);
 
