@@ -28,8 +28,30 @@
   max-width: 350px;
   height: 200px;
   padding: .5rem;
-  margin: 10px;
+  margin: 10px 0;
   background-color: rgba(135, 135, 135, .5);
+}
+@media (max-width: 760px) {
+  .box-small{
+    width: 100%;
+    height: auto;
+  }
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+.placeholder{
+  max-width: 350px;
+  height: auto;
+}
+@media (max-width: 640px) {
+.placeholder{
+    width: 100%;
+    height: auto;
+  }
 }
 
 figcaption{
@@ -38,4 +60,8 @@ figcaption{
 
 .titles{
   text-align: center;
+}
+
+button{
+  margin: 10px 0;
 }

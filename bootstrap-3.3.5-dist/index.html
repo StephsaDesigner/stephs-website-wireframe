@@ -48,21 +48,66 @@
       </nav>
 
       <div class="container-fluid" id="fullpage">
+
         <div class="section active home" data-anchor="section0">
-          <div class="row">
-            <div class="col-md-12 center-block box-large">
-              <div class="page-header">
-                <h1>Welcome <small>this is the home page!</small></h1>
+            <div class="row">
+              <div class="col-md-12 center-block box-large">
+                <div class="page-header">
+                  <h1>Welcome <small>this is the home page!</small></h1>
+                </div>
               </div>
             </div>
-          </div>
         </div>
+
         <div class="section" id="about" data-anchor="section1">
-          <div class="wrap">
             <div class="row">
               <div class="col-sm-12 center-block">
                 <div class="page-header titles">
                   <h1>About</h1>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="col-md-4 col-sm-12">
+                  <!--<div class="box-small center-block">
+                    <h3>image</h3>
+                  </div>-->
+                  <img src="img/kitten-square.jpg" class="placeholder center-block" alt="Cute place holder kitten!">
+                  <figcaption class="center-block">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     Donec at risus vel ipsum malesuada consectetur. Morbi id lobortis dolor, a.
+                  </figcaption>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                  <!--<div class="box-small center-block">
+                    <h3>image</h3>
+                  </div>-->
+                  <img src="img/kitten-square.jpg" class="placeholder center-block" alt="Cute place holder kitten!">
+                  <figcaption class="center-block">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     Donec at risus vel ipsum malesuada consectetur. Morbi id lobortis dolor, a.
+                  </figcaption>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                  <!--<div class="box-small center-block">
+                    <h3>image</h3>
+                  </div>-->
+                  <img src="img/kitten-square.jpg" class="placeholder center-block" alt="Cute place holder kitten!">
+                  <figcaption class="center-block">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     Donec at risus vel ipsum malesuada consectetur. Morbi id lobortis dolor, a.
+                  </figcaption>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="section" id="portfolio" data-anchor="section2">
+            <div class="row">
+              <div class="col-sm-12 center-block">
+                <div class="page-header titles">
+                  <h1>Portfolio</h1>
                 </div>
               </div>
             </div>
@@ -97,9 +142,13 @@
                 </div>
               </div>
             </div>
-          </div>
+            <div class="row">
+              <div class="col-small-12">
+                <button type="button" class="btn btn-info center-block">View More</button>
+              </div>
+            </div>
         </div>
-        <div class="section" id="portfolio" data-anchor="section2"><h1>Portfolio</h1></div>
+
         <div class="section" id="blog" data-anchor="section3"><h1>Blog</h1></div>
         <div class="section" id="contact" data-anchor="section4"><h1>Contact</h1></div>
       </div>
@@ -118,6 +167,8 @@
         $('#fullpage').fullpage({
           anchors:['section0', 'section1', 'section2', 'section3', 'section4']
         });
+
+        //$.fn.fullpage.setFitToSection(false);
 
         $('.navbar-collapse a').click(function (e) {
           $('.navbar-collapse').collapse('toggle');
